@@ -1,0 +1,434 @@
+:root{
+    --pri:#F8F4E1;
+    --sec:#381C0A;
+    --tri1:#FEBA17;
+    --tri2:#74512D;
+    --red:red;
+    --green:rgb(9,138,89);
+    --blue:rgb(0,191,255)
+}
+@font-face{
+    font-family: aeonik;
+    font-weight: 200;
+    src: url(./AeonikTRIAL-Light.otf);
+}
+@font-face{
+    font-family: aeonik;
+    font-weight: 500;
+    src: url(./AeonikTRIAL-Regular.otf);
+}
+@font-face{
+    font-family:aeonik;
+    font-weight: 700;
+    src: url(./AeonikTRIAL-Bold.otf);
+}
+*{
+    margin: 0;
+    padding :0;
+    box-sizing: border-box;
+}
+html,
+body{
+    height: 100%;
+    width: 100%;
+    background-color: #7D5A50;
+    color: white;
+}
+#main{
+    height: 100%;
+    width: 100%;;
+}
+section.allElems{
+    height: 100%;
+    width: 100%;
+    background-color: #7D5A50;
+    padding: 40px;
+    overflow: auto;
+    position: absolute;
+     
+} 
+.allElems .allfeatures{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 40px;
+}
+.allElems header{
+     height: 400px;
+     width: 100%;
+     color: var(--pri);
+     background-color: var(--tri2);
+     background-image: url(https://images.unsplash.com/photo-1652235888417-f671389f0d72?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fHN1bm55JTIwY2xlYXIlMjBza3l8ZW58MHx8MHx8fDA%3D);
+     background-size: cover;
+     margin-bottom: 50px;
+     border-radius: 40px;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: 60px;
+}
+ header .header1 h1{
+    font-size: 100px;
+    font-weight: 700;
+ }
+ header .header1 h2{
+    font-size: 60px;
+    font-weight: 500;
+ }
+ header .header2 h2{
+    font-size: 60px;
+    font-weight: 800;
+ }
+ header .header2 h3{
+    font-size: 25px;
+    font-weight: 500;
+ }
+ header .header2 h4{
+    font-size: 30px;
+    font-weight: 500;
+ }
+.elem{
+    background-color: #feba17;
+    /* padding: 30px 40px; */
+    height: 400px;
+    width: 330px;
+    font-size: 50px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    transition: all ease 0.5s;
+}
+.elem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.elem h2{
+    position: absolute;
+    color: white;
+    bottom: 4%;
+    font-weight: 500;
+    font-size: 30px;
+    right: 5%;
+    
+    
+}
+.elem:active{
+    scale:0.97;
+}
+.fullElems{
+    height: 100%;
+    width: 100%;
+    background-color: #7D5A50;
+    color: white;
+    padding: 40px;
+    font-size: 60px;
+    display: none;
+    position: absolute;
+}
+.back{
+    position: absolute;
+    font-size: 40px;
+    right: 5%;
+    background-color: red;
+    color: white;
+    border-radius: 10%;
+    padding: 10px;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+.back:active{
+    scale:0.90;
+}
+.todolistfullpage{
+    display: block;
+}
+.fullElems h1{
+    font-size: 40px;
+}
+.todolistfullpage .todocontainer{
+    height: 80%;
+    width: 100%;
+    margin-top:30px;
+    background-color: var(--pri);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+    border-radius: 20px;
+}
+.todolistfullpage .todocontainer .addtask{
+    width:33%;
+    background-color:var(--tri2) ;
+    height: 100%;
+    border-radius: 20px;
+    
+}
+.todolistfullpage .todocontainer .addtask form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px;
+    gap:10px;
+    
+
+}
+.todocontainer .addtask form input#task{
+    padding: 15px 25px;
+    width: 100%;
+    font-size: 28px;
+    background-color: var(--pri);
+    border-radius: 5px;
+    border: none;
+    outline:20px ;
+    
+}
+.todocontainer .addtask form textarea{
+    padding: 15px 25px;
+    width: 100%;
+    font-size: 28px;
+    background-color: var(--pri);
+    border-radius: 5px;
+    border: none;
+    outline:none ;
+    margin-bottom: 20px;
+}
+.todocontainer .addtask form button{
+    padding: 15px 25px;
+    width: 100%;
+    font-size: 28px;
+    background-color: rgb(224, 161, 43);
+    border-radius: 5px;
+    border: none;
+    outline:none ;
+    margin-bottom: 20px;
+    color: whitesmoke;
+}
+.todocontainer .addtask form button:active{
+    scale: 0.98;
+}
+.todolistfullpage .todocontainer .alltask{
+    width:65%;
+    background-color: var(--tri2);
+    height: 100%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px;
+    overflow: auto;
+}
+.task{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: var(--pri);
+    padding: 20px 30px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+.task h5{
+    color:var(--sec);
+    font-size: 30px;
+     display: flex;
+  align-items: center;
+  gap:10px
+}
+.task h5 span{
+  background-color: red;
+  color: white;
+  padding: 3px 5px;
+  border-radius: 50%;
+  font-size: 10px;
+ 
+}
+.false{
+    opacity:0;
+}
+.task button{
+    padding: 15px 30px;
+    color: var(--pri);
+    background-color: green;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    font-weight: 600;
+}
+.task button:active{
+    scale: 0.98;
+}
+.markimp{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 0;
+    width: 100%;
+    font-size: 20px;
+}
+.markimp input{
+    width:30px;
+}
+
+.dailyplanarfullpage{
+    display:block;
+}
+.dailyplanarfullpage h2{
+    font-size: 70px;
+}
+.dailyplanarfullpage .dayplanner{
+    background-color: var(--pri);
+    height: 85%;
+    margin-top: 40px;
+    width: 100%;
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    overflow: auto;
+}
+.dailyplanarfullpage .dayplanner .dayplannertime{
+   
+   display: flex;
+   align-items: center;
+   position: relative;
+   width: 49%;
+
+   
+}
+ .dayplanner .dayplannertime p{
+   position: absolute;
+   top:5%;
+   left: 1%;
+  font-size: 20px;
+   
+}
+.dayplanner .dayplannertime input{
+    padding: 20px 40px;
+    width: 100%;
+    background-color: var(--tri2);
+    border-radius: 5px;
+    border: none;
+    font-size: 26px;
+    padding-top: 32px;
+    outline: none;
+}
+.motivatioinfullpage{
+    display: block;
+    position: relative;
+}
+
+.motivatioinfullpage .motivationcontainer{
+    height: 500px;
+    width: 50%;
+    background-color: var(--tri2);
+    position: absolute;
+    border-radius: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.motivatioinfullpage .motivationcontainer::after{
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: var(--pri);
+    border-radius: 50px;
+    filter: blur(150px);
+    scale: 1.1;
+    z-index: 1;
+}
+
+.motivatioinfullpage .motivationcontainer .motivationwrapper{
+    z-index: 10;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: var(--tri1);
+    border-radius: 40px;
+    padding: 15px;
+    border: 4px solid var(--sec);
+    box-sizing: border-box;
+}
+
+.motivation1{
+    background-color: var(--tri2);
+    padding: 35px;
+    border-radius: 40px;
+}
+
+.motivatioinfullpage .motivation1 h2{
+    font-size: 30px;
+    padding: 10px;
+    margin: 0;
+}
+
+.motivatioinfullpage .motivationwrapper p{
+    font-size: 30px;
+    padding: 15px;
+    margin: 0;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 80%;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+                 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.motivatioinfullpage .motivationwrapper span{
+    font-size: 20px;
+    position: absolute;
+    right: 30px;
+    bottom: 25px;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+.pomodorofullpage{
+    display: block;
+}
+.pomodorofullpage h2{
+    font-size: 80px;
+}
+.pomodorofullpage .pomotimer{
+    position: absolute;
+    top:50%;left:50%;
+    transform:translate(-50%,-50%);
+    text-align: center;
+}
+.pomotimer h1{
+    font-size:200px;
+
+}
+.pomotimer button{
+    background-color: var(--pri);
+    font-size: 20px;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 5px 5px 0px black;
+}
+.pomotimer button:active{
+    scale:0.95;
+}
+.pomodorofullpage .session{
+    position: absolute;
+    top: 20%;
+    left:50%;
+    transform: translate(-50%,0);
+    background-color: var(--green);
+    padding: 15px 30px;
+    font-size: 30px;
+    border-radius: 5px;
+}
+
